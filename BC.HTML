@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بطاقة شخصية</title>
+    <style>
+        /* تخصيص الصفحة الرئيسية */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* تصميم البطاقة */
+        .card {
+            width: 90%;
+            max-width: 350px;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: #cccccc; /* لون رمادي */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* إضافة الشعار */
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* نص البطاقة */
+        .card h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .card p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* زر الوصول إلى البريد الإلكتروني */
+        .card a.email-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF; /* لون أزرق */
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .card a.email-link:hover {
+            background-color: #0056b3; /* تغيير اللون عند التحويم */
+        }
+
+        /* تحسينات للهاتف المحمول */
+        @media (max-width: 600px) {
+            .card {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .card h2 {
+                font-size: 20px;
+            }
+
+            .card p {
+                font-size: 14px;
+            }
+
+            .card a.email-link {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <!-- الشعار -->
+    <img src="https://via.placeholder.com/100" alt="شعار" class="logo">
+    
+    <!-- معلومات البطاقة -->
+    <h2>محمد أحمد</h2>
+    <p><strong>المسمى الوظيفي:</strong> مطور ويب</p>
+    <p><strong>البريد الإلكتروني:</strong> mohammed@example.com</p>
+    
+    <!-- زر التواصل عبر البريد الإلكتروني -->
+    <a href="mailto:mohammed@example.com" class="email-link">تواصل معي</a>
+</div>
+
+</body>
+</html>
