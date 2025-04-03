@@ -5,109 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بطاقة شخصية</title>
     <style>
-        /* تخصيص الصفحة الرئيسية */
+        /* تنسيق الصفحة الرئيسية */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #7F7F80;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background-color: #4B0082; /* لون خلفية الصفحة (كحلي لامع) */
+            font-family: Arial, sans-serif;
         }
 
         /* تصميم البطاقة */
-        .card {
-            width: 90%;
-            max-width: 350px;
-            padding: 20px;
-            border-radius: 15px;
-            background-color: #cccccc; /* لون رمادي */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
+        .business-card {
+            width: 300px;
+            height: 500px;
+            background-image: url('https://i.imgur.com/your_image_url.jpg'); /* استبدل الرابط بالصورة المرفقة */
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: relative;
             overflow: hidden;
+            text-align: center;
+            color: #FFD700; /* لون النص الذهبي */
         }
 
-        /* إضافة الشعار */
-        .logo {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 15px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /* تذييل البطاقة */
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* شفافية خلفية الزر */
+            color: #FFD700;
         }
 
-        /* نص البطاقة */
-        .card h2 {
-            margin: 0 0 10px;
-            font-size: 24px;
-            color: #333;
-        }
-
-        .card p {
-            margin: 5px 0;
-            font-size: 16px;
-            color: #555;
-        }
-
-        /* زر الوصول إلى البريد الإلكتروني */
-        .card a.email-link {
+        /* زر الإتصال */
+        .call-button {
             display: inline-block;
-            margin-top: 20px;
             padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007BFF; /* لون أزرق */
+            background-color: #2ECC71; /* لون الزر الأخضر */
+            color: white;
             text-decoration: none;
             border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
             transition: background-color 0.3s ease;
         }
 
-        .card a.email-link:hover {
-            background-color: #0056b3; /* تغيير اللون عند التحويم */
+        .call-button:hover {
+            background-color: #27AE60; /* لون الزر عند التفاعل */
         }
 
-        /* تحسينات للهاتف المحمول */
-        @media (max-width: 600px) {
-            .card {
-                width: 95%;
-                padding: 15px;
-            }
+        /* تنسيق النصوص */
+        h1 {
+            font-size: 24px;
+            margin-top: 50px;
+        }
 
-            .card h2 {
-                font-size: 20px;
-            }
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
 
-            .card p {
-                font-size: 14px;
-            }
-
-            .card a.email-link {
-                font-size: 14px;
-                padding: 8px 16px;
-            }
+        /* إضافة رمز الهاتف إلى الزر */
+        .call-button::before {
+            content: "📞";
+            margin-right: 5px;
         }
     </style>
 </head>
 <body>
 
-<div class="card">
-    <!-- الشعار -->
-    <img src="https://via.placeholder.com/100" alt="شعار" class="logo">
-    
-    <!-- معلومات البطاقة -->
-    <h2>ENG. Sanad Khaled</h2>
-    <p><strong>The Title:</strong>Founder & GM of SURAXY</p>
-    <p><strong>Email:</strong>sanad.gm@suraxy.com</p>
-    
-    <!-- زر التواصل عبر البريد الإلكتروني -->
-    <a href="mailto:mohammed@example.com" class="email-link">Contact me</a>
-</div>
+    <!-- بطاقة الشخصية -->
+    <div class="business-card">
+        <h1>إسم الشخص</h1>
+        <p>المسمى الوظيفي</p>
+        <p>الإيميل: example@example.com</p>
+        <p>رقم الهاتف: +966 123 456 789</p>
+        <p>الموقع الإلكتروني: www.example.com</p>
+
+        <!-- تذييل البطاقة -->
+        <div class="footer">
+            <a href="tel:+966123456789" class="call-button">اتصل الآن</a>
+        </div>
+    </div>
 
 </body>
 </html>
